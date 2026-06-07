@@ -58,9 +58,15 @@ class Security
     public static function hashPassword(string $password): string
     {
         $algo = defined('PASSWORD_ARGON2ID') ? PASSWORD_ARGON2ID : PASSWORD_BCRYPT;
-        $options = ($algo === PASSWORD_ARGON2ID)
-            ? ['memory_cost' => 65536, 'time_cost' => 4, 'threads' => 3]
-            : ['cost' => 12];
+        if ($algo === PASSWORD_ARGON2ID) {
+            $options = ['memory_cost' => 65536, 'time_cost' => 4];
+            // threads > 1 not supported on all builds
+            if (defined('PASSWORD_ARGON2_PROVIDER')) {
+                $options['threads'] = 1;
+            }
+        } else {
+            $options = ['cost' => 12];
+        }
         return password_hash($password, $algo, $options);
     }
 
