@@ -1,6 +1,6 @@
-# Text Board — Admin Usage Guide
+# Context Board — Admin Usage Guide
 
-This guide covers all administrative operations for the Text Board application.  
+This guide covers all administrative operations for the Context Board application.  
 The admin panel is accessible at [`/admin`](/admin) and requires no JavaScript — all destructive actions are confirmed via HTML checkboxes.
 
 ---

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Base TestCase for Text Board tests.
+ * Base TestCase for Context Board tests.
  *
  * Provides an isolated temporary data directory for each test.
  */
@@ -17,7 +17,7 @@ abstract class TestCase extends PHPUnitTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->tempDir = sys_get_temp_dir() . '/text-board-test/' . uniqid('test_', true) . '/';
+        $this->tempDir = sys_get_temp_dir() . '/context-board-test/' . uniqid('test_', true) . '/';
         mkdir($this->tempDir, 0755, true);
 
         // Create essential subdirectories

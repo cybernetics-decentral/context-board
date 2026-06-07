@@ -27,7 +27,7 @@ class BoardController
         usort($boards, fn($a, $b) => ($a['sort_order'] ?? 0) <=> ($b['sort_order'] ?? 0));
 
         echo $this->template->render('board_index', [
-            'pageTitle' => 'Text Board',
+            'pageTitle' => 'Context Board',
             'boards'    => $boards,
             'layout'    => 'layout',
         ]);

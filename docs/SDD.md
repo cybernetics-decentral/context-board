@@ -1,6 +1,6 @@
 # Software Design Document (SDD)
 
-## Text Board Application
+## Context Board Application
 
 **Version:** 1.0  
 **Date:** 2026-06-07  
@@ -94,11 +94,11 @@
 
 ### 1.1 Purpose
 
-This Software Design Document (SDD) translates the requirements defined in the [SRS.md](SRS.md) into a concrete technical design. It describes the architecture, components, interfaces, algorithms, and data structures that will be implemented to satisfy every functional and non-functional requirement. The SDD serves as the primary implementation guide for developers building the Text Board Application.
+This Software Design Document (SDD) translates the requirements defined in the [SRS.md](SRS.md) into a concrete technical design. It describes the architecture, components, interfaces, algorithms, and data structures that will be implemented to satisfy every functional and non-functional requirement. The SDD serves as the primary implementation guide for developers building the Context Board Application.
 
 ### 1.2 Scope
 
-The design covers the complete Text Board Application:
+The design covers the complete Context Board Application:
 
 - **Front Controller** routing all HTTP requests
 - **Controller layer** handling board display, posting, admin operations, and authentication
@@ -223,7 +223,7 @@ Every HTTP request follows this sequence:
 ### 2.3 Directory and File Layout
 
 ```
-text-board/
+context-board/
 ├── public/                              # Document root (web-accessible)
 │   ├── index.php                        # Front controller — ALL requests enter here
 │   ├── .htaccess                        # Apache mod_rewrite rules
@@ -848,7 +848,7 @@ class Template {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $pageTitle ?? 'Text Board' ?></title>
+    <title><?= $pageTitle ?? 'Context Board' ?></title>
     <link rel="stylesheet" href="/css/style.css">
     <?php if ($autoRefresh ?? false): ?>
     <meta http-equiv="refresh" content="<?= $refreshSeconds ?? 30 ?>">
@@ -863,7 +863,7 @@ class Template {
         <?= $content ?>
     </main>
     <footer>
-        <p>Text Board — No JavaScript Required</p>
+        <p>Context Board — No JavaScript Required</p>
     </footer>
 </body>
 </html>
@@ -1915,7 +1915,7 @@ $errorData = [
 
 ```
 1. Clone/copy application files to server
-2. Set document root to text-board/public/
+2. Set document root to context-board/public/
 3. Ensure data/ directory is writable by web server user:
    chown -R www-data:www-data data/
    chmod 750 data/
@@ -1965,7 +1965,7 @@ Require all denied
 server {
     listen 80;
     server_name example.com;
-    root /var/www/text-board/public;
+    root /var/www/context-board/public;
     index index.php;
 
     # Deny access to hidden files
@@ -2063,7 +2063,7 @@ server {
 
 ### 10.4 Test Data Management
 
-- All tests use a temporary data directory (`/tmp/text-board-test/`) created in `setUp()` and destroyed in `tearDown()`.
+- All tests use a temporary data directory (`/tmp/context-board-test/`) created in `setUp()` and destroyed in `tearDown()`.
 - Test fixtures (boards, threads, replies) are created programmatically for each test.
 - No test depends on the state left by another test.
 - The production `data/` directory is never touched by tests.

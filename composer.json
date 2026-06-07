@@ -1,6 +1,6 @@
 {
-    "name": "context-board/text-board",
-    "description": "A lightweight, anonymous, JavaScript-free text board application built with vanilla PHP 8.x and flatfile JSON storage.",
+    "name": "context-board/context-board",
+    "description": "A lightweight, anonymous, JavaScript-free context board application built with vanilla PHP 8.x and flatfile JSON storage.",
     "type": "project",
     "require": {
         "php": ">=8.1"

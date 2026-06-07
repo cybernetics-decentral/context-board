@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($pageTitle ?? 'Text Board', ENT_QUOTES, 'UTF-8') ?></title>
+    <title><?= htmlspecialchars($pageTitle ?? 'Context Board', ENT_QUOTES, 'UTF-8') ?></title>
     <link rel="stylesheet" href="/css/style.css">
     <?php if ($autoRefresh ?? false): ?>
     <meta http-equiv="refresh" content="<?= $refreshSeconds ?? 30 ?>">
@@ -18,7 +18,7 @@
         <?= $content ?>
     </main>
     <footer>
-        <p>Text Board — No JavaScript Required</p>
+        <p>Context Board — No JavaScript Required</p>
     </footer>
 </body>
 </html>

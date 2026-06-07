@@ -1,6 +1,6 @@
 <?php $layout = 'layout'; ?>
 
-<h1>Text Board</h1>
+<h1>Context Board</h1>
 
 <?php if (empty($boards)): ?>
     <p>No boards have been created yet.</p>

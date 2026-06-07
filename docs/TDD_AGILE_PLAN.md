@@ -1,6 +1,6 @@
 # Agile Implementation Plan — Test-Driven Development
 
-## Text Board Application
+## Context Board Application
 
 **Version:** 1.0
 **Date:** 2026-06-07
@@ -184,8 +184,8 @@ The implementation plan maps every Functional Requirement to at least one user s
 
 - Defines `ROOT_DIR` constant
 - Requires all `src/*.php` files
-- Creates `/tmp/text-board-test/` in `setUp()` of base `TestCase`
-- Deletes `/tmp/text-board-test/` in `tearDown()`
+- Creates `/tmp/context-board-test/` in `setUp()` of base `TestCase`
+- Deletes `/tmp/context-board-test/` in `tearDown()`
 - Overrides config `data_dir` to point to temp directory
 
 **Acceptance criteria:**
@@ -197,7 +197,7 @@ The implementation plan maps every Functional Requirement to at least one user s
 ### Sprint 0 Deliverables
 
 ```
-text-board/
+context-board/
 ├── .github/workflows/test.yml
 ├── composer.json
 ├── phpunit.xml
@@ -1172,7 +1172,7 @@ A user story is **Done** only when:
 | R-05 | Admin password lost (no recovery mechanism) | Low | High | Document manual recovery: delete `admin.json`, re-run `/setup`. |
 | R-06 | Rate limit file accumulation over time | Low | Low | Files older than 1 hour auto-deleted on read. Periodic cleanup. |
 | R-07 | CSS-only UI limitations (no JS for enhanced UX) | Medium | Low | Accepted constraint (C-004). Progressive enhancement not applicable. |
-| R-08 | Test data directory collision between parallel CI runs | Low | Medium | Use unique temp dir per run: `/tmp/text-board-test/{uuid}/`. |
+| R-08 | Test data directory collision between parallel CI runs | Low | Medium | Use unique temp dir per run: `/tmp/context-board-test/{uuid}/`. |
 
 ---
 
