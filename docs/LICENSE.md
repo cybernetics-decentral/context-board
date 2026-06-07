@@ -2,9 +2,7 @@
 
 © 2026 Abhishek Kumar <mr.kumar.abhishek@outlook.in>
 
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
-
-To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+This license applies **only** to the documentation files in this directory. The source code in this repository is licensed separately.
 
 ---
 
@@ -29,12 +27,14 @@ No warranties are given. The license may not give you all of the permissions nec
 
 ---
 
+To view the full license, visit https://creativecommons.org/licenses/by-sa/4.0/
+
 **Licensed Documents:**
 
-- [`SRS.md`](docs/SRS.md) — Software Requirements Specification
-- [`SDD.md`](docs/SDD.md) — Software Design Document
-- [`TDD_AGILE_PLAN.md`](docs/TDD_AGILE_PLAN.md) — Agile TDD Implementation Plan
+- [`SRS.md`](SRS.md) — Software Requirements Specification
+- [`SDD.md`](SDD.md) — Software Design Document
+- [`TDD_AGILE_PLAN.md`](TDD_AGILE_PLAN.md) — Agile TDD Implementation Plan
 
-**Author:** Abhishek Kumar  
-**Email:** mr.kumar.abhishek@outlook.in  
+**Author:** Abhishek Kumar
+**Email:** mr.kumar.abhishek@outlook.in
 **Year:** 2026
