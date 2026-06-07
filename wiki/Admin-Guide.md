@@ -275,3 +275,7 @@ The public board and thread pages include an automatic refresh mechanism (every 
 | `/admin/boards/{board_id}/thread/{thread_id}/reply/{post_id}/delete` | POST | Delete a reply (cascading) |
 | `/admin/password`                                           | GET    | Password change form              |
 | `/admin/password`                                           | POST   | Submit password change            |
+
+---
+
+© 2026 Abhishek Kumar <mr.kumar.abhishek@outlook.in> — Licensed under [CC BY-SA 4.0](../docs/LICENSE.md)
