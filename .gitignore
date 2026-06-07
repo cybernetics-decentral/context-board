@@ -1,0 +1,24 @@
+# Runtime data
+data/admin.json
+data/admin_audit.log
+data/boards/
+data/ip_logs/
+data/logs/
+data/tmp/
+
+# Composer
+vendor/
+
+# PHPUnit
+.phpunit.cache/
+phpunit.xml.cache
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

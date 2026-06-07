@@ -31,9 +31,10 @@ class Router
             $regex = $this->patternToRegex($pattern, $paramNames);
 
             if (preg_match($regex, $uri, $matches)) {
+                // $matches[0] is full match; $matches[1..n] are capture groups
                 $params = [];
-                foreach ($paramNames as $name) {
-                    $params[] = $matches[$name] ?? null;
+                for ($i = 1; $i < count($matches); $i++) {
+                    $params[] = $matches[$i];
                 }
                 call_user_func_array([$controller, $methodName], $params);
                 return;
