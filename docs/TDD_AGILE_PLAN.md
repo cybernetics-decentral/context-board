@@ -1236,3 +1236,7 @@ jobs:
 ---
 
 *End of Agile TDD Implementation Plan*
+
+---
+
+© 2026 Abhishek Kumar <mr.kumar.abhishek@outlook.in> — Licensed under [CC BY-SA 4.0](../LICENSE.md)
